@@ -1,0 +1,46 @@
+// Online C++ compiler to run C++ program online
+#include <iostream>
+using namespace std;
+
+string reverse(string s)
+{
+    string result;
+    s.insert(0, " ");
+    int breakpoint = 0;
+    //if (c >= 'a' && c <= 'z' || c >= 'A' && c <= 'Z')
+     for(int i = 0; i <= s.length(); i++) {
+        char c = s[i];
+        
+        if (c == ' ' || c == '\0') { 
+           
+            for(int k=i-1; k>breakpoint; k--){
+                char j = s[k];
+                if (k == i-1) { result += toupper(j);}
+               
+                else{result += tolower(j);};
+                
+        };
+        
+        breakpoint = i;
+        result += " ";
+     };
+
+     };
+  
+   
+    return result;
+}
+
+
+
+
+int main() {
+    // Write C++ code here
+    
+    cout<<"Geben Sie einen String ein" <<endl;
+    string input_str;
+    getline(cin, input_str);
+    string back = reverse(input_str);
+    cout <<back;
+    return 0;
+}

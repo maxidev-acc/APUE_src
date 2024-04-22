@@ -4,18 +4,28 @@ using namespace std;
 
 void printRaute(int len) {
    int range = len*2+1;
-   
-   for(int k =1; k<=range/2; k++) {
-        for(int leer = 0; leer <=len-k; leer++) {cout<<" ";};
-        for(int stern = 0; stern<k*2-1; stern++) {cout<<"*";};
-   cout<<""<<endl;     
-}; 
-    for(int k =0; k<range; k++) { cout<<"*";};
-    cout<<""<<endl;  
+   for(int k =1; k<=len; k++)
+    
+  
+   {    
+       string new_row; 
+       new_row.append(len+1-k, ' ');
+       new_row.append(k*2-1, '*');
+       cout <<new_row<<endl;
+       
+    }; 
+    
+    
+    string middle; 
+    middle.append(range, '*');
+    cout<<middle<<endl;
+    
    for(int k =len; k>0; k--) {
-        for(int leer = 0; leer <=len-k; leer++) {cout<<" ";};
-        for(int stern = 0; stern<k*2-1; stern++) {cout<<"*";};
-   cout<<""<<endl;     
+       
+       string new_row; 
+       new_row.append(len+1-k, ' ');
+       new_row.append(k*2-1, '*');
+       cout <<new_row<<endl;
 }; 
         
 }

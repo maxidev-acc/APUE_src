@@ -1,0 +1,6 @@
+{
+    "files.associations": {
+        "*.php": "php",
+        "u1_3,cpp": "c"
+    }
+}
