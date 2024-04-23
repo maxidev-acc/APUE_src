@@ -1,42 +1,60 @@
 #include <iostream>
 using namespace std;
 
-void printRaute(int len) {
+
+void printRhombus(int len) {
+
    int range = len*2+1;
+   
    for(int k =1; k<=len; k++)
-    
-  
    {    
-       string new_row; 
-       new_row.append(len+1-k, ' ');
-       new_row.append(k*2-1, '*');
-       cout <<new_row<<endl;
+       string newLineUpperRhombus; 
+       newLineUpperRhombus.append(len+1-k, ' ');
+       newLineUpperRhombus.append(k*2-1, '*');
+       cout <<newLineUpperRhombus<<endl;
        
     }; 
     
     
-    string middle; 
-    middle.append(range, '*');
-    cout<<middle<<endl;
+        string middleLineRhombus; 
+        middleLineRhombus.append(range, '*');
+        cout<<middleLineRhombus<<endl;
     
    for(int k =len; k>0; k--) {
        
-       string new_row; 
-       new_row.append(len+1-k, ' ');
-       new_row.append(k*2-1, '*');
-       cout <<new_row<<endl;
+       string newLineLowerRhombus; 
+       newLineLowerRhombus.append(len+1-k, ' ');
+       newLineLowerRhombus.append(k*2-1, '*');
+       cout <<newLineLowerRhombus<<endl;
 }; 
         
+}
+
+
+int inputHandler() {
+
+    int sideLength;
+    cout<<" Rhombus Programm"<<endl;
+    cout<<" Prompt side length as Int. Prompt 0 to terminate programm."<<endl;
+if (cin >> sideLength) {
+    return(sideLength);
+} else {
+    cout<<"Error. Wrong input type.";
+    return (0);
+}
+    
+    
+    
+    
+
 }
    
 int main() {
     while (1) {
-    cout<<" Raute Programm"<<endl;
-    cout<<" Geben Sie die Seitenlänge an. 0  als Input zum beenden"<<endl;
-    int seitenlänge;
-    cin >>seitenlänge;
-    printRaute(seitenlänge);
-    if( seitenlänge ==0) {break;}
+    int sideLength= inputHandler();
+    if( sideLength ==0) {break;}
+    printRhombus(sideLength);
+    
  };
 return 0;
 }

@@ -2,19 +2,20 @@
 #include <iostream>
 using namespace std;
 
-int isPrime(int num) {
+int isPrime(int inputNumber) {
     
-    if (num == 1) {
-        cout<<"Sonderfall. 1 ist KEINE Primzahl";
+    if (inputNumber == 1) {
+        cout<<"\nEXCLUSIVE NUMBER. 1 is not a prime number\n";
         return (0);
     };
     
-    for (int k=2; k<num; k++) {
-        if(num%k == 0) {
-        cout<<"Keine Primzahl"<<endl; cout<<"Teiler: ";
-        for (int j=2; j<num; j++) {
-        if(num%j == 0){cout<<j; cout<<" ,"; };
+    for (int k=2; k<inputNumber; k++) {
+        if(inputNumber%k == 0) {
+        cout<< to_string(inputNumber) + " is not a prime number \n"<<endl; cout<<"Dividers: ";
+        for (int j=2; j<inputNumber; j++) {
+        if(inputNumber%j == 0){cout<<j; cout<<" "; };
         };
+        
       return(0); 
        
     };
@@ -22,18 +23,28 @@ int isPrime(int num) {
     
 };
 
-cout << to_string(num) + " ist eine Primzahl!";
+cout << to_string(inputNumber) + " is a prime number!";
 return (1);
     
 }
 
 
+int inputHandler(){
+    cout<<"\n"<<endl;
+    cout<<"*********************************"<<endl;
+    cout<<"Programm to check if number is a prime number. \n 0 will terminate the programm \n"   <<endl;
+    int inputNumber;
+    cin>>inputNumber;
+    return(inputNumber);
+}
+
 int main() {
-    // Write C++ code here
-    
-    cout<<"Geben Sie eine Zahl ein!" <<endl;
-    int inputnum;
-    cin>>inputnum;
-    isPrime(inputnum);
+ 
+    while(1){ 
+    int inputNumber = inputHandler();
+    if( inputNumber == 0) {break;}; 
+    isPrime(inputNumber);
+    }
     return 0;
+   
 }

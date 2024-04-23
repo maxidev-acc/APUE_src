@@ -1,6 +1,9 @@
 {
     "files.associations": {
         "*.php": "php",
-        "u1_3,cpp": "c"
+        "u1_3,cpp": "c",
+        "iostream": "cpp",
+        "xstring": "cpp",
+        "ostream": "cpp"
     }
 }
