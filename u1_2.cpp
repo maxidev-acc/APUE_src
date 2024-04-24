@@ -29,22 +29,41 @@ return (1);
 }
 
 
-int inputHandler(){
+void programmInfoBox(){
     cout<<"\n"<<endl;
     cout<<"*********************************"<<endl;
-    cout<<"Programm to check if number is a prime number. \n 0 will terminate the programm \n"   <<endl;
-    int inputNumber;
-    cin>>inputNumber;
-    return(inputNumber);
+    cout<<"Prime Number Programm"<<endl;
+    cout<<"Programm to check if number is a prime number. \n0 will terminate the programm!\nEntering invalid input (str, -int) will terminate the programm! "<<endl;
+
+
+
+
 }
 
-int main() {
- 
-    while(1){ 
-    int inputNumber = inputHandler();
-    if( inputNumber == 0) {break;}; 
-    isPrime(inputNumber);
-    }
+
+int inputHandler() {
+    cout<<"\nEnter new number: "<<endl;
+    int sideLength;
+if (cin >> sideLength) {
+    if (sideLength >= 0){ return(sideLength);};
+    cout<<"Error. No negative Int-Input allowed" <<endl;;
+    return(0);
+} else {
+    cout<<"Error. Wrong input type.";
+    return (0);
+}
+        
+}
+
+
+int main(){
+    programmInfoBox();
+    while(1)
+    {
+        int newInput = inputHandler();
+        if (newInput ==0) { break;};
+        isPrime(newInput);
+
+    };
     return 0;
-   
 }

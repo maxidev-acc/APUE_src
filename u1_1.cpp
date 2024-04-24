@@ -31,13 +31,20 @@ void printRhombus(int len) {
 }
 
 
+void programmInfoBox(){
+    cout<<"Rhombus Programm"<<endl;
+    cout<<"Enter side length as Int. Entering 0 will terminate the programm. \nEntering invalid input (str, float) will terminate the programm! "<<endl;
+
+}
+
+
 int inputHandler() {
 
     int sideLength;
-    cout<<" Rhombus Programm"<<endl;
-    cout<<" Prompt side length as Int. Prompt 0 to terminate programm."<<endl;
 if (cin >> sideLength) {
-    return(sideLength);
+    if (sideLength >= 0){ return(sideLength);};
+    cout<<"Error. No negative Int-Input allowed" <<endl;;
+    return(0);
 } else {
     cout<<"Error. Wrong input type.";
     return (0);
@@ -48,8 +55,12 @@ if (cin >> sideLength) {
     
 
 }
-   
+
+
+
+
 int main() {
+    programmInfoBox();
     while (1) {
     int sideLength= inputHandler();
     if( sideLength ==0) {break;}
