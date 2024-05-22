@@ -1,14 +1,7 @@
 {
     "files.associations": {
         "*.php": "php",
-        "u1_3,cpp": "c",
-        "iostream": "cpp",
-        "xstring": "cpp",
-        "ostream": "cpp",
-        "iosfwd": "cpp",
-        "set": "cpp",
-        "format": "cpp",
-        "cmath": "cpp",
-        "list": "cpp"
+        "xlocale": "cpp",
+        "ostream": "cpp"
     }
 }
